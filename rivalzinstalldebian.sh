@@ -14,11 +14,11 @@ sudo apt install -y task-gnome-desktop
 # Установить сервер удаленного рабочего стола (xrdp) 
 sudo apt install -y xrdp
 
-# Добавить пользователя с введенным именем и паролем
+# Добавить пользователя с введенным именем и паролем 
 sudo useradd -m -s /bin/bash $USER
-echo "$USER:$PASSWORD" | sudo chpasswd 
+echo "$USER:$PASSWORD" | sudo chpasswd
 
-# Добавить пользователя в группу sudo для административных прав 
+# Добавить пользователя в группу sudo для административных прав  
 sudo usermod -aG sudo $USER
 
 # Настроить xrdp для использования GNOME desktop
@@ -36,7 +36,7 @@ sudo systemctl set-default graphical
 sudo apt install -y wget
 
 # Скачать Rivalz.ai rClient AppImage
-wget https://api.rivalz.ai/fragmentz/clients/rClient-latest.AppImage -O rClient-latest.AppImage  
+wget https://api.rivalz.ai/fragmentz/clients/rClient-latest.AppImage -O rClient-latest.AppImage
 
 # Сделать AppImage исполняемым
 chmod +x rClient-latest.AppImage
