@@ -9,9 +9,9 @@ echo # Добавляем перенос строки после ввода па
 sudo apt update
 
 # Установить GNOME Desktop
-sudo apt install -y task-desktop  
+sudo apt install -y task-gnome-desktop     
 
-# Установить сервер удаленного рабочего стола (xrdp)
+# Установить сервер удаленного рабочего стола (xrdp) 
 sudo apt install -y xrdp
 
 # Добавить пользователя с введенным именем и паролем
@@ -30,11 +30,13 @@ sudo systemctl restart xrdp
 # Включить xrdp при старте системы
 sudo systemctl enable xrdp
 
+sudo systemctl set-default graphical
+
 # Установить необходимые зависимости для Rivalz.ai rClient
 sudo apt install -y wget
 
 # Скачать Rivalz.ai rClient AppImage
-wget https://api.rivalz.ai/fragmentz/clients/rClient-latest.AppImage -O rClient-latest.AppImage
+wget https://api.rivalz.ai/fragmentz/clients/rClient-latest.AppImage -O rClient-latest.AppImage  
 
 # Сделать AppImage исполняемым
 chmod +x rClient-latest.AppImage
@@ -46,6 +48,6 @@ sudo -u $USER mkdir -p /home/$USER/Documents
 sudo mv rClient-latest.AppImage /home/$USER/Documents/rClient-latest.AppImage
 
 # Изменить владельца файла rClient на указанного пользователя
-sudo chown $USER:$USER /home/$USER/Documents/rClient-latest.AppImage
+sudo chown $USER:$USER /home/$USER/Documents/rClient-latest.AppImage 
 
 echo "Установка завершена. GNOME Desktop, xrdp и Rivalz.ai rClient установлены. Вы можете подключиться через удаленный рабочий стол с пользователем $USER."
