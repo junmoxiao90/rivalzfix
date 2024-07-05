@@ -9,7 +9,7 @@ echo # Добавляем перенос строки после ввода па
 sudo apt update
 
 # Установить GNOME Desktop
-sudo apt install -y task-gnome-desktop     
+sudo apt install -y task-gnome-desktop
 
 # Установить сервер удаленного рабочего стола (xrdp) 
 sudo apt install -y xrdp
